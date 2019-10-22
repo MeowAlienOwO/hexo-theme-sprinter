@@ -1,0 +1,9 @@
+.responsive(@maxWidth; @rules) {
+    @media screen and (max-width: @maxWidth){
+        @rules();
+    }
+}
+
+.responsive-mobile(@rules) {
+    .responsive(600px; @rules)
+}

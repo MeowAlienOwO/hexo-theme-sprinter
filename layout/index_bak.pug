@@ -1,0 +1,29 @@
+extends includes/layout.pug
+
+block content
+  .home-content
+    .home-cat
+      .home-title
+        h1= config.title
+        h3= config.subtitle
+      .home-entr
+        ul.home-entr-list
+          each url, label in theme.menu
+            li
+              a.home-btn-link(href=url)= label
+
+      .home-posts
+        if page.posts.length > 0
+          ol.home-post-list
+            each post in page.posts.sort('date', -1).limit(5).toArray()
+              li.home-recent-post
+                a(href=url_for(post.path))= post.title
+      //- #paginator!= paginator()
+    .home-img
+      img(src='/images/title-img-1.jpg')
+  
+
+
+    //- include includes/recent-posts.pug
+  //- #paginator!= paginator()
+  //- include includes/footer.pug

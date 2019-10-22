@@ -1,0 +1,27 @@
+extends includes/layout.pug
+
+block content
+  #post.card
+    if page.cover
+      .post-cover
+        img(src=page.cover.image)
+        .cover-author
+          a(href=page.cover.source)= '画师: ' + page.cover.author
+    .post-title
+      h1#title= page.title
+
+      time#date(datetime=page.date.toJSON())= date(page.date, date_format)
+
+
+    article.md-article.container
+      != page.content
+    
+    .post-footer
+      .tags
+        span
+          i.fas.fa-tag
+        each tag in page.tags.data
+          a(href=url_for(tag.path))
+            span.tag=tag.name
+  //- #paginator!= paginator()
+

@@ -1,0 +1,32 @@
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  About: /about
+  Resume: /resume
+  Archives: /archives
+
+# stylesheets 
+stylesheets:
+- https://cdnjs.cloudflare.com/twitter-bootstrap/4.3.1/css/bootstrap-reboot.min.css
+- https://cdnjs.cloudflare.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css
+- https://cdnjs.cloudflare.com/animate.css/3.7.0/animate.min.css
+# - https://cdnjs.cloudflare.com/bootstrap-material-design/4.0.2/bootstrap-material-design.min.css
+- /css/sprinter.css
+
+
+# scripts 
+scripts:
+- https://cdnjs.cloudflare.com/jquery/3.4.1/jquery.slim.min.js
+- https://cdnjs.cloudflare.com/popper.js/1.15.0/umd/popper.min.js
+- https://cdnjs.cloudflare.com/lodash.js/4.17.11/lodash.min.js
+- https://cdnjs.cloudflare.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js
+# - https://cdnjs.cloudflare.com/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js
+- /js/sprinter.js
+
+
+mathjax:
+  enable: true
+  cdn: //cdnjs.cloudflare.com/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML
+  

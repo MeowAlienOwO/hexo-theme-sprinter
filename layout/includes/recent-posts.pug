@@ -1,0 +1,7 @@
+include post-card.pug
+
+if page.posts.length > 0
+  #recent-posts.card-list
+    each post in page.posts.sort('date', -1).limit(50).toArray()
+      +post-card(post)
+    include pagination.pug

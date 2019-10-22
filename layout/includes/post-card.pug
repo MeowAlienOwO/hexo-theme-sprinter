@@ -1,0 +1,35 @@
+mixin post-card(post)
+  .post-card.card
+    if post.cover
+      .post-cover
+        a(href=url_for(post.path))
+          img(src=post.cover.image)
+        if post.cover.source
+          .cover-author
+            a(href=post.cover.source)= '画师: ' + post.cover.author
+    if post.title
+      .post-title
+        h2.post-title-text
+          a(href=url_for(post.path))= post.title
+        h3.post-date
+          time(datetime=post.date.toJSON())= date(post.date, date_format)
+    //- if post.tags
+    //-   .post-tags
+    //-      each tag in post.tags
+    //-        .post-tag
+    if post.excerpt
+      .post-excerpt.md-article!=post.excerpt
+
+        //- h5.cover-source= post.cover.source
+  //- .post-card
+  //-   .cover-image
+  //-     if post.cover
+  //-       img(src=post.cover.image)
+  //-       h4.cover-autor= post.cover.author
+  //-       h5.cover-source= post.cover.source
+
+  //-   h2.post-title
+  //-     a(href=url_for(post.path))= post.title
+  //-   //- if post.date
+    //-   h3.post-date
+    //-     time(datetime=date.toJSON())= date(date, date_format)

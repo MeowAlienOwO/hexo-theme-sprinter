@@ -1,0 +1,188 @@
+@import 'fonts.less';
+@import 'mixins.less';
+@title-black: #333;
+@split-color: #ccc;
+
+
+@major-color: #cc3333;
+@follow-color: #ccc;
+@reverse-color: #003366;
+#post {
+    width: 85%;
+    margin: 2rem auto;
+
+    .post-cover{
+        width: 100%;
+        font-size: 14px;
+        
+    }
+
+    .post-title{
+        width: 90%;
+        margin: 0 auto;
+        padding: 3rem 0 1rem;
+        border-bottom: @split-color 1px solid;
+        h1#title{
+            width: 100%;
+            display: block;
+            .font-hei();
+            font-size: 36px; 
+            color: @title-black;
+            text-align: center;
+            margin: 0.5rem 0 0;
+        }
+
+        time#date{
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            color: #666;
+            font-weight: 300;
+            text-align: center;
+        }
+
+
+    }
+
+
+
+
+    .post-footer{
+        border-top: @split-color 1px solid;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem 0 3rem;
+        .tags{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+            .tag{
+                background: #CC9999;
+                color: white;
+                padding: 1px 4px;
+                border-radius: 3px;
+                text-align: center;
+                margin: 0 0.5rem;
+            }
+        }
+    }
+
+
+
+    
+
+}
+
+
+.md-article {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #333;
+    .responsive-mobile({
+        font-size: 14px;
+    });
+
+    .font-hei();
+
+    p {
+        line-height: 1.8em;
+        text-align: justify;
+        text-justify: ideographic;
+        code {
+            display: inline-block;
+            background: #eee;
+            color: black;
+            padding: 0 0.3em;
+            margin: 0 0.2em;
+            border-radius: 5px;
+            font-family: 'Source Code Pro', 'Consolas', 'Courier New',  'Menlo', monospace;
+        }
+    }
+
+
+    h1 {font-size: 28px;}
+    h2 {font-size: 26px;}
+    h3 {font-size: 24px;}
+    h4 {font-size: 22px;}
+    h5 {font-size: 20px;}
+    h6 {font-size: 18px;}
+    h1, h2, h3, h4, h5, h6{
+        color: @title-black;
+        &:before{
+            content: '# ';
+            color: #999;
+        }
+    }
+
+    a {
+        color: @major-color;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    pre{
+        padding: 0.8rem;
+        border-radius: 5px;
+    }
+
+
+    blockquote{
+        p{
+            display: inline-block;
+            border-left: #cc3333 0.5em solid;
+            padding: 0 0.5em;
+            color: #999;
+
+        }
+    }
+
+    hr {
+        border-bottom: none;
+        border-top: @split-color 1px dashed;
+        margin: 8px 0 8px;
+    }
+
+    img{
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+
+    em {
+        color: #999;
+    }
+
+    strong{
+        color: black;
+    }
+
+    .table-container>table{
+        border-collapse: collapse;
+        width: 100%;
+        margin: 0.5em auto;
+        th, td {
+            padding: 0.2em 0.6em;
+        }
+        thead{
+            color: @major-color;
+        }
+        tr:nth-child(even){
+            background: #eee;
+        }
+        &, td, th{
+            border: @split-color 1px solid;
+            text-align: left;
+        }
+    }
+    
+    ul li {
+        list-style: circle;
+        margin: default;
+    }
+    
+
+}

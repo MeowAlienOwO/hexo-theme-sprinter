@@ -1,0 +1,14 @@
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no')
+meta(name='robot', content='index,follow')
+meta(name='format-detection', content='telephone=no')
+meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+meta(name='renderer', content='webkit')
+meta(http-equiv='Cache-Control', content='no-siteapp')
+
+if theme.stylesheets !== undefined && theme.stylesheets.length > 0
+  //- stylesheets list from _config.yml
+  each url in theme.stylesheets
+    link(rel='stylesheet', href=url)
+if config.highlightjs && config.highlightjs.enable
+  link(rel='stylesheet', href='/thirdparty/highlightjs/styles/' + config.highlightjs.theme + '.css')

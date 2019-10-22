@@ -1,0 +1,14 @@
+extends includes/layout.pug
+include includes/post-card.pug
+
+block content
+  #tag.card-list
+    h1= 'Tag: ' + page.tag
+    - page.posts.each(function(article){
+      +post-card(article)
+      //- a(href=url_for(article.path))= article.title
+      //- time(datetime=date_xml(article.date))= date(article.date)
+      //- br.clear
+    - })
+  include includes/pagination.pug
+  //- #paginator!= paginator()
