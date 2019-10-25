@@ -1,0 +1,5 @@
+- var image = (page.cover && page.cover.image) ? page.cover.image : config.avatar
+- var sites = config.share.config.sites.join()
+.social-share(data-image=image, data-sites=sites)
+script(src='/thirdparty/sharejs/dist/js/share.min.js')
+  

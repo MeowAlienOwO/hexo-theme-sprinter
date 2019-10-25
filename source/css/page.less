@@ -1,0 +1,44 @@
+@import 'variables.less';
+@import 'fonts.less';
+@import 'mixins.less';
+
+#page {
+    width: 85%;
+    margin: 2rem auto;
+
+    .page-cover{
+        width: 100%;
+        font-size: 14px;
+        
+    }
+
+    .page-title{
+        width: 90%;
+        margin: 0 auto;
+        padding: 3rem 0 1rem;
+        border-bottom: @split-color 1px solid;
+        h1#title{
+            width: 100%;
+            display: block;
+            .font-hei();
+            font-size: 36px; 
+            color: @title-black;
+            text-align: center;
+            margin: 0.5rem 0 0;
+        }
+
+        time#date{
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            color: #666;
+            font-weight: 300;
+            text-align: center;
+        }
+
+
+    }
+
+
+
+}

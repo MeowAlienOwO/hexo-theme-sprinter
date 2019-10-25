@@ -1,0 +1,11 @@
+- var name_dic = {'weibo': '微博', 'wechat': '微信', 'qq': 'QQ', 'qzone': 'QQ空间', 'douban': '豆瓣', 'renren': '人人', 'facebook': 'Facebook', 'twitter': 'twitter'};
+button.-mob-share-ui-button.-mob-share-open.share-open= '分享'
+ 
+.-mob-share-ui(style="display: none")
+  ul.-mob-share-list
+    each item in config.share.platform
+      li(class="-mob-share-initialized -mob-share-"+item)
+        p= name_dic[item]
+  button.-mob-share-close.share-close= '取消'
+.-mob-share-ui-bg
+script#-mob-share(src='http://f1.webshare.mob.com/code/mob-share.js?appkey='+config.share.appkey)

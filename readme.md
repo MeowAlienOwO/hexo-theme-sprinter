@@ -7,6 +7,8 @@ Personal use
 
 inspired by Sprinter by kajiura yuuki (Kara no kyoukai 5th theme song)
 
+style inspired(but not copied) from https://github.com/litten/hexo-theme-yilia
+
 under development
 
 
@@ -18,5 +20,9 @@ under development
 
 # TODO
 - [ ] mobile style
+- [ ] several archive pages
 - [ ] comment
 - [ ] music
+- [ ] sns share
+- [ ] finantial support
+- [ ] analysis

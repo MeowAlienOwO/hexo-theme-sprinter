@@ -1,7 +1,29 @@
 extends includes/layout.pug
 
 block content
-  h1= page.title
-  article#page.md-article.container
-    != page.content
+  //- h1= page.title
+  //- article#page.md-article.container
+    //- != page.content
   //- #paginator!= paginator()
+  #page.card
+    if page.cover
+      .page-cover
+        img(src=page.cover.image)
+        .cover-author
+          a(href=page.cover.source)= '画师: ' + page.cover.author
+    .page-title
+      h1#title= page.title
+
+      time#date(datetime=page.date.toJSON())= date(page.date, date_format)
+
+    article.md-article.container
+      != page.content
+    
+    //- .page-footer
+//-      .tags
+//-        span
+//-          i.fas.fa-tag
+//-        each tag in page.tags.data
+//-          a(href=url_for(tag.path))
+//-            span.tag=tag.name
+  

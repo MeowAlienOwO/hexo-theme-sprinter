@@ -12,3 +12,5 @@ if theme.stylesheets !== undefined && theme.stylesheets.length > 0
     link(rel='stylesheet', href=url)
 if config.highlightjs && config.highlightjs.enable
   link(rel='stylesheet', href='/thirdparty/highlightjs/styles/' + config.highlightjs.theme + '.css')
+if config.share
+  link(rel='stylesheet', href='/thirdparty/sharejs/dist/css/share.min.css')

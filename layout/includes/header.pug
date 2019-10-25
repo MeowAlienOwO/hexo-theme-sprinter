@@ -21,9 +21,14 @@ header
 
     nav
       ul.menu
-        each url, label in theme.menu
-          li
-            a.index-menu-link(href=url)= label
+        if config.menu 
+          each url, label in config.menu
+            li
+              a.index-menu-link(href=url)= label
+        else
+          each url, label in theme.menu
+            li
+              a.index-menu-link(href=url)= label
 
     .social
       each name, href in theme.social

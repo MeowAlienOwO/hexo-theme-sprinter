@@ -12,7 +12,6 @@ block content
 
       time#date(datetime=page.date.toJSON())= date(page.date, date_format)
 
-
     article.md-article.container
       != page.content
     
@@ -23,5 +22,9 @@ block content
         each tag in page.tags.data
           a(href=url_for(tag.path))
             span.tag=tag.name
+      if config.share
+        .share
+          //- include includes/_thirdparty/mobshare.pug
+          include includes/_thirdparty/sharejs.pug
   //- #paginator!= paginator()
 
