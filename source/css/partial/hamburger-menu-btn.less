@@ -1,0 +1,80 @@
+@import 'fonts.less';
+@import 'social-icons.less';
+@import 'variables.less';
+@import 'mixins.less';
+
+@btn-length: 40px;
+@btn-border-width: 2px;
+@btn-bar-height: 2px;
+@btn-bar-width: 20px;
+@btn-bar-distance: 6px;
+@btn-padding-left: (@btn-length - @btn-bar-width) / 2;
+@btn-padding-top: (@btn-length - 3*@btn-bar-height - 2*@btn-bar-distance) / 2;
+@menu-top: 20px;
+@menu-left: 20px;
+
+.menu-btn-container {
+    // position: absolute;
+    // height: @btn-length;
+    display: block;
+    box-sizing: border-box;
+    top: 20px;
+    left: 20px;
+
+    &.activate {
+        #menu-bar-up {
+            transform: rotate(45deg);
+            top: @btn-bar-distance + 2px;
+        }
+
+        #menu-bar-middle {
+            opacity: 0;
+        }
+
+        #menu-bar-bottom {
+            transform: rotate(-45deg);
+            top: @btn-bar-distance - 2px;
+        }
+    }
+}
+
+.menu-btn {
+    background: white;
+    width: @btn-length;
+    box-sizing: border-box;
+    height: @btn-length;
+    background: @avatar-up-color;
+    // border-radius: 50%;
+    // border-width: 2px;
+    position: relative;
+    padding-left: @btn-padding-left;
+    padding-top: @btn-padding-top;
+    cursor: pointer;
+
+    // &:hover {
+    //     box-shadow: 2px 2px 5px 2px #aaa;
+    // }
+
+    .menu-bar {
+        box-sizing: border-box;
+        width: @btn-bar-width;
+        height: @btn-bar-height;
+        position: relative;
+        // background: black;
+        background: white;
+        transition: all 0.4s ease;
+    }
+
+    #menu-bar-up {
+        top: auto;
+    }
+
+    #menu-bar-middle {
+        top: @btn-bar-distance;
+    }
+
+    #menu-bar-bottom {
+        top: 2* @btn-bar-distance;
+    }
+
+}

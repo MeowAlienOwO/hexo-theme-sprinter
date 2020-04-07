@@ -14,11 +14,11 @@ html(lang=config.language)
 
   body
     .wrap
-      include header.pug
+      include mobile-header.pug
+      include sidemenu.pug
       .content
         block content
-        include footer
-
+        include footer.pug
 
     //- include footer.pug
     include _thirdparty/scripts.pug

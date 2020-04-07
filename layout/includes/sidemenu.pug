@@ -1,0 +1,39 @@
+- var motto = config.motto[Math.floor(Math.random() * config.motto.length)]
+
+mixin social-link(href, name)
+  a(class='social-icon social-icon-color-' + name, href!=href)
+    i(class='iconfont icon-'+name)
+
+aside
+
+  .avatar
+    .avatar-black
+    img.avatar-img(src=config.avatar) 
+
+  .author
+    h1.author-name= config.author
+    .author-keywords
+      each w in config.keywords
+        span=w
+  .motto  
+    h3!= motto
+
+  nav
+    ul.menu
+      if config.menu 
+        each url, label in config.menu
+          li
+            a.index-menu-link(href=url)= label
+      else
+        each url, label in theme.menu
+          li
+            a.index-menu-link(href=url)= label
+
+  .social
+    each name, href in theme.social
+      +social-link(name, href)
+      
+
+  
+
+    

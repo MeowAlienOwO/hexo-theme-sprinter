@@ -2,6 +2,7 @@
 @import 'partial/index.less';
 @import 'mixins.less';
 @import 'variables.less';
+@import 'sidemenu.less';
 @import 'post.less';
 @import 'page.less';
 @import 'home.less';
@@ -33,47 +34,44 @@ a {
 
 // header
 
-.wrap{
+.wrap {
     width: 100%;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     height: 100vh;
-    .responsive-mobile({
-        flex-direction: column;
-        height: auto;
-     });
+
+    .responsive-mobile( {
+            flex-direction: column;
+            height: auto;
+        }
+
+    );
 }
 
-// header and content 
+// sidemenu and content 
 
-header {
+aside {
     height: 100vh;
-    flex: 0 0 ;
-    min-width: 400px;
+    flex: 0 0;
+    min-width: 300px;
     background: white;
-    .responsive-mobile({
-        width: 100%;
-        min-width: 0;
-        position: fixed;
-        height: auto;
-        z-index: 1;
-        // background: none;
-    })
 }
 
-.content{
-    flex:1 1;
+.content {
+    flex: 1 1;
     overflow: auto;
-    .responsive-mobile({
-        margin-top: @avatar-mobile-height + 10px;
-    });
 
-    footer{
+    .responsive-mobile( {
+            // margin-top: @avatar-mobile-height + 10px;
+            margin-top: 60px;
+        }
+
+    );
+
+    footer {
         width: 100%;
         text-align: center;
         font-size: 14px;
         min-height: 5rem;
     }
 }
-
-

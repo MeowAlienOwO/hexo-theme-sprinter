@@ -4,9 +4,11 @@ block content
   #post.card
     if page.cover
       .post-cover
-        img(src=page.cover.image)
-        .cover-author
-          a(href=page.cover.source)= '画师: ' + page.cover.author
+        if page.cover.image
+          img(src=page.cover.image)
+        if page.cover.author
+          .cover-author
+            a(href=page.cover.source)= 'author: ' + page.cover.author
     .post-title
       h1#title= page.title
 
