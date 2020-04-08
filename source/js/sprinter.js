@@ -24,8 +24,10 @@ $(document).ready(function () {
         if ($('.menu-btn-container').hasClass('activate')) {
             $('.menu-btn-container').removeClass('activate')
             $('aside').removeClass('activate')
+            // $('aside').addClass('close')
         } else {
             $('.menu-btn-container').addClass('activate')
+            // $('aside').removeClass('close')
             $('aside').addClass('activate')
         }
     })
